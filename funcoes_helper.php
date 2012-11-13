@@ -1,10 +1,10 @@
 <?php
 /**
 *
-* @author Everlon Passos <dev@everlon.com.br>
-* @link http://www.everlon.com.br Página pessoal do Autor
-* @version 1.0 (em desenvolvimento)
-* @copyright 2012-2013 Grupo MG Contábil
+* @author     Everlon Passos <dev@everlon.com.br>
+* @link       http://www.everlon.com.br Página pessoal do Autor
+* @version    1.0-dev
+* @copyright  2012-2013 Everlon Passos
 *
 */
       function e($texto)
