@@ -1,12 +1,17 @@
 <?php
 /**
 *
-* @author     Everlon Passos <dev@everlon.com.br>
-* @link       http://www.everlon.com.br Página pessoal do Autor
-* @version    1.0 (em desenvolvimento)
-* @copyright  2012-2013 Grupo MG Contábil
+* @author Everlon Passos <dev@everlon.com.br>
+* @link http://www.everlon.com.br Página pessoal do Autor
+* @version 1.0 (em desenvolvimento)
+* @copyright 2012-2013 Grupo MG Contábil
 *
 */
+      function e($texto)
+      {
+          echo $texto; # Não você não esta vendo demais... é a função mais ridícula que já vi, tinha que postar aqui :o)
+      }
+
       function data_to_db($data) { return implode('', array_reverse(explode('-', $data))); }
 
       function data_br($data)
