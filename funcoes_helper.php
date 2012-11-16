@@ -138,7 +138,39 @@
           echo "<pre>";
 
           exit(); # You shall not pass!
-     }
+      }
+
+
+      # Acrescentando a função para servidores anteriores ao PHP 5.3 (precisei dessa função e meu server era 5.2)
+
+      # (PHP 5 >= 5.3.0)
+      # array_replace — Replaces elements from passed arrays into the first array
+
+      if (!function_exists('array_replace'))
+      {
+        function array_replace( array &$array, array &$array1 )
+        {
+          $args = func_get_args();
+          $count = func_num_args();
+
+          for ($i = 0; $i < $count; ++$i) {
+            if (is_array($args[$i])) {
+              foreach ($args[$i] as $key => $val) {
+                $array[$key] = $val;
+              }
+            }
+            else {
+              trigger_error(
+                __FUNCTION__ . '(): Argument #' . ($i+1) . ' is not an array',
+                E_USER_WARNING
+              );
+              return NULL;
+            }
+          }
+
+          return $array;
+        }
+      }
 
 /* End of file funcoes_helper.php */
 /* Location: helpers/funcoes_helper.php */
