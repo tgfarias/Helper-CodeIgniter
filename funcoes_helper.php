@@ -161,7 +161,7 @@
             }
             else {
               trigger_error(
-                __FUNCTION__ . '(): Argument #' . ($i+1) . ' is not an array',
+                __FUNCTION__ . '(): Argumento #' . ($i+1) . ' não é um array',
                 E_USER_WARNING
               );
               return NULL;
@@ -171,6 +171,10 @@
           return $array;
         }
       }
+
+      # Função VOLTAR em JS
+      # Define a quantidade de páginas no histórico se quer voltar
+      function voltar($i=1) { echo '<script type="text/javascript">history.go(-'.$i.')</script>'; }
 
 /* End of file funcoes_helper.php */
 /* Location: helpers/funcoes_helper.php */
